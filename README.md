@@ -1,46 +1,89 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img alt="Letmeask" title="Letmeask" src=".github/logo.svg" width="220px" color="#fff" />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="#-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-executar-o-projeto">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Licença</a>
+</p>
 
-## Available Scripts
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/pedromiiguel/Letmeask">
 
-In the project directory, you can run:
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/pedromiiguel/Ecoleta">
+	
+  
+  <a href="https://github.com/pedromiiguel/Ecoleta/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pedromiiguel/Ecoleta">
+  </a>
 
-### `yarn start`
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+   <a href="https://github.com/pedromiiguel/Ecoleta/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/pedromiiguel/Ecoleta?style=social">
+  </a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br/>
 
-### `yarn test`
+<h1 align="center">
+    <img alt="Ecoleta" title="Ecoleta" src=".github/smartphone-ecoleta.png" width="20%" height="440px"/>
+    <img alt="Ecoleta" title="Ecoleta" src=".github/ecoleta.png" width="70%" height="430px"/>
+</h1>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔖 Sobre
 
-### `yarn build`
+Desenvolvindo durante a Next Level Week 1.0 da Rocketseat, o Ecoleta é um marketplace que ajuda pessoas a encontrarem pontos de coleta de resíduos de forma eficiente. Conectando empresas que coletam resíduos orgânicos e inorgânicos a pessoas precisam descartar seus resíduos de uma forma sustentável.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Tecnologias
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Tecnologias utilizazadas no projeto:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/pt-br/)
+- [SQLite](https://www.sqlite.org/index.html)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
-### `yarn eject`
+## 🛠 Layout
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+O layout da aplicação está disponível no [Figma](https://www.figma.com/file/Byw4X5etg8VCmezueyhzkC/Ecoleta-(Starter)?node-id=136%3A546). Para poder utilizá-lo é necessário uma conta no Figma.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔧 Como executar o projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Pré-requisitos
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<p> É necessário possuir o Node.js instalado na máquina </p>
+<p>E também possuir um gerenciador de tarefas NPM ou Yarn.</p>
 
-## Learn More
+```bash
+# Clone este repositório
+$ git clone https://github.com/pedromiiguel/Ecoleta
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Acesse a pasta do projeto no terminal/cmd
+$ cd Ecoleta
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run start
+
+# O servidor inciará na porta:3000 - acesse http://localhost:3000 
+```
+
+## 📝 Licença
+
+Esse projeto está sob a licença MIT.
+
+## :man_astronaut: Autor
+
+#### Pedro Miguel
+
+- Git Hub: <a href="https://github.com/pedromiiguel" target='_blanck' >@pedromiiguel</a>
+- Linkedin: <a href="https://www.linkedin.com/in/pedro-miiguel" target='_blanck' >@pedromiiguel</a>
