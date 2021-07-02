@@ -18,11 +18,13 @@
   <a href="https://github.com/pedromiiguel/Ecoleta/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pedromiiguel/Letmeask">
   </a>
+   <a href="https://github.com/pedromiiguel/Letmeask/blob/main/LICENSE">
+  <img alt="License" src="https://img.shields.io/github/license/pedromiiguel/Letmeask?style=plastic">
+  </a>
 
-  <!-- <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/pedromiiguel/Ecoleta/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/pedromiiguel/Ecoleta?style=social">
-  </a> -->
+   <a href="https://github.com/pedromiiguel/Letmeask/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/pedromiiguel/Letmeask?style=social">
+  </a>
 </p>
 
 <br/>
@@ -59,7 +61,7 @@ O layout da aplicação está disponível no [Figma](<https://www.figma.com/file
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/pedromiiguel/Ecoleta
+$ git clone https://github.com/pedromiiguel/Letmeask.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd letmeask
