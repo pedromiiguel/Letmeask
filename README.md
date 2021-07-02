@@ -13,46 +13,42 @@
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/pedromiiguel/Letmeask">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/pedromiiguel/Ecoleta">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/pedromiiguel/Letmeask">
 	
-  
   <a href="https://github.com/pedromiiguel/Ecoleta/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pedromiiguel/Ecoleta">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pedromiiguel/Letmeask">
   </a>
 
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+  <!-- <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
    <a href="https://github.com/pedromiiguel/Ecoleta/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/pedromiiguel/Ecoleta?style=social">
-  </a>
+  </a> -->
 </p>
-
 
 <br/>
 
 <h1 align="center">
-    <img alt="Ecoleta" title="Ecoleta" src=".github/smartphone-ecoleta.png" width="20%" height="440px"/>
-    <img alt="Ecoleta" title="Ecoleta" src=".github/ecoleta.png" width="70%" height="430px"/>
+     <img alt="Letmeask" title="Letmeask" src=".github/index.png"/>
 </h1>
 
 ## 🔖 Sobre
 
-Desenvolvindo durante a Next Level Week 1.0 da Rocketseat, o Ecoleta é um marketplace que ajuda pessoas a encontrarem pontos de coleta de resíduos de forma eficiente. Conectando empresas que coletam resíduos orgânicos e inorgânicos a pessoas precisam descartar seus resíduos de uma forma sustentável.
+Desenvolvido durante a Next Level Week Together da Rocketseat, o Letmeask é uma aplicação para criação de salas, onde o criador pode interir com seu público, respondendo suas dúvidas e destacando dúvidas mais relevantes.
 
 ## 🚀 Tecnologias
 
 Tecnologias utilizazadas no projeto:
 
-- [Node.js](https://nodejs.org/en/)
-- [Express](https://expressjs.com/pt-br/)
-- [SQLite](https://www.sqlite.org/index.html)
-- [Nunjucks](https://mozilla.github.io/nunjucks/)
-- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [React](https://reactjs.org/)
+- [Firebase](https://firebase.google.com/)
+- [Typescript](https://www.typescriptlang.org/)
+- [SASS](https://sass-lang.com/)
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
 ## 🛠 Layout
 
-O layout da aplicação está disponível no [Figma](https://www.figma.com/file/Byw4X5etg8VCmezueyhzkC/Ecoleta-(Starter)?node-id=136%3A546). Para poder utilizá-lo é necessário uma conta no Figma.
+O layout da aplicação está disponível no [Figma](<https://www.figma.com/file/xx4WphYhSfBgmFoMWniOYb/Letmeask-(Copy)>). Para poder utilizá-lo é necessário uma conta no Figma.
 
 ## 🔧 Como executar o projeto
 
@@ -66,15 +62,15 @@ O layout da aplicação está disponível no [Figma](https://www.figma.com/file/
 $ git clone https://github.com/pedromiiguel/Ecoleta
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd Ecoleta
+$ cd letmeask
 
 # Instale as dependências
-$ npm install
+$ npm install ou yarn 
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm run start
+$ npm start ou yarn start
 
-# O servidor inciará na porta:3000 - acesse http://localhost:3000 
+# O servidor inciará na porta:3000 - acesse http://localhost:3000
 ```
 
 ## 📝 Licença
