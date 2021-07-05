@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.4);
 
   display: flex;
   justify-content: center;
@@ -25,6 +25,13 @@
 
     border-radius: 8px;
 
+    @media (max-width: 600px) {
+      margin: 0 16px;
+      gap: 16px;
+    }
+
+   
+
     img {
       width: 48px;
       height: 48px;
@@ -41,9 +48,22 @@
       line-height: 26px;
     }
 
+    @media (max-width: 350px) {
+      p {
+        margin: 0 16px;
+      }
+    }
+
     .buttons-container {
       display: flex;
       gap: 16px;
+
+      @media (max-width: 350px) {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        align-items: center;
+      }
 
       button {
         height: 50px;
@@ -60,6 +80,10 @@
         border: 0;
 
         transition: filter 0.2s;
+
+        @media (max-width: 350px) {
+          width: 90%;
+        }
 
         &:first-child {
           color: #737380;

@@ -1,21 +1,20 @@
-import { useParams } from 'react-router-dom';
-import { Button } from '../components/Button';
-import { ModalDelete } from '../components/ModalDelete';
-import { ModalCloseRoom } from '../components/ModalCloseRoom';
-
-import { Question } from '../components/Question';
-
-import { RoomCode } from '../components/RoomCode';
-import logoImg from '../assets/images/logo.svg';
-import DeleteImg from '../assets/images/delete.svg';
-import CheckImg from '../assets/images/check.svg';
-import AnswerImg from '../assets/images/answer.svg';
-
-import '../styles/room.scss';
-
-import { useRoom } from '../hooks/useRoom';
 import { useState } from 'react';
-import { database } from '../services/firebase';
+
+import { useParams } from 'react-router-dom';
+import { Button } from '../../components/Button';
+import { ModalDelete } from '../../components/ModalDeleteQuestion';
+import { ModalCloseRoom } from '../../components/ModalCloseRoom';
+import { Question } from '../../components/Question';
+import { RoomCode } from '../../components/RoomCode';
+import { useRoom } from '../../hooks/useRoom';
+import { database } from '../../services/firebase';
+
+import logoImg from '../../assets/images/logo.svg';
+import DeleteImg from '../../assets/images/delete.svg';
+import CheckImg from '../../assets/images/check.svg';
+import AnswerImg from '../../assets/images/answer.svg';
+
+import '../Room/room.scss';
 
 type RoomParams = {
   id: string;
@@ -57,7 +56,6 @@ export function AdminRoom() {
             <Button isOutlined onClick={handleCLoseModal}>
               Encerrar sala
             </Button>
-            {modalIsOpen && <ModalCloseRoom setIsOpen={setIsOpen} />}
           </div>
         </div>
       </header>
@@ -106,6 +104,7 @@ export function AdminRoom() {
                   setModalDeleteIsOpen={setModalDeleteIsOpen}
                 />
               )}
+              {modalIsOpen && <ModalCloseRoom setIsOpen={setIsOpen} />}
             </Question>
           ))}
         </div>

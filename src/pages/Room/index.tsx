@@ -1,16 +1,16 @@
 import { FormEvent, useState } from 'react';
-
 import { useParams } from 'react-router-dom';
-import { Button } from '../components/Button';
-import { Question } from '../components/Question';
+import { Button } from '../../components/Button';
+import { Question } from '../../components/Question';
+import { RoomCode } from '../../components/RoomCode';
+import { useAuth } from '../../hooks/useAuth';
+import { database } from '../../services/firebase';
+import { useRoom } from '../../hooks/useRoom';
 
-import { RoomCode } from '../components/RoomCode';
-import logoImg from '../assets/images/logo.svg';
+import logoImg from '../../assets/images/logo.svg';
 
-import '../styles/room.scss';
-import { useAuth } from '../hooks/useAuth';
-import { database } from '../services/firebase';
-import { useRoom } from '../hooks/useRoom';
+import './room.scss';
+
 
 type RoomParams = {
   id: string;
@@ -81,7 +81,7 @@ export function Room() {
           <textarea
             value={newQuestion}
             onChange={(event) => setNewQuestion(event.target.value)}
-            placeholder="O que você quer pergutar"
+            placeholder="O que você quer perguntar"
           />
 
           <div className="form-footer">

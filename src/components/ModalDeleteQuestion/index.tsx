@@ -1,9 +1,9 @@
-import '../styles/modal.scss';
-import DeleteModalimg from '../assets/images/delete-modal.svg';
-
-
-import { database } from '../services/firebase';
+import { database } from '../../services/firebase';
 import { useParams } from 'react-router-dom';
+
+import DeleteModalimg from '../../assets/images/delete-modal.svg';
+
+import '../ModalCloseRoom/modal.scss';
 
 
 type ModalType = {

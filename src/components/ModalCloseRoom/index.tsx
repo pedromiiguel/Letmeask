@@ -1,7 +1,7 @@
-import '../styles/modal.scss';
-import CloseRoomImg from '../assets/images/close-room.svg';
+import './modal.scss';
+import CloseRoomImg from '../../assets/images/close-room.svg';
 
-import { database } from '../services/firebase';
+import { database } from '../../services/firebase';
 import { useHistory, useParams } from 'react-router-dom';
 
 
