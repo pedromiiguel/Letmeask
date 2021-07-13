@@ -14,7 +14,14 @@ import DeleteImg from '../../assets/images/delete.svg';
 import CheckImg from '../../assets/images/check.svg';
 import AnswerImg from '../../assets/images/answer.svg';
 
-import '../Room/room.scss';
+import {
+  PageRoom,
+  Menu,
+  MainContent,
+  MainTitle,
+  QuestionList
+} from '../Room/style';
+
 
 type RoomParams = {
   id: string;
@@ -47,8 +54,8 @@ export function AdminRoom() {
   }
 
   return (
-    <div id="page-room">
-      <header>
+    <PageRoom>
+      <Menu>
         <div className="content">
           <img src={logoImg} alt="Letmeask" />
           <div>
@@ -58,15 +65,15 @@ export function AdminRoom() {
             </Button>
           </div>
         </div>
-      </header>
-      <main className="content">
-        <div className="room-title">
+      </Menu>
+      <MainContent>
+        <MainTitle>
           <h1>Sala {title}</h1>
 
           {questions.length > 0 && <span>{questions.length} pergunta(s)</span>}
-        </div>
+        </MainTitle>
 
-        <div className="question-list">
+        <QuestionList>
           {questions.map(question => (
             <Question
               content={question.content}
@@ -107,8 +114,8 @@ export function AdminRoom() {
               {modalIsOpen && <ModalCloseRoom setIsOpen={setIsOpen} />}
             </Question>
           ))}
-        </div>
-      </main>
-    </div>
+        </QuestionList>
+      </MainContent>
+    </PageRoom>
   );
 }
