@@ -1,10 +1,12 @@
-.button {
+import styled from 'styled-components';
+
+export const ButtonComponent = styled.button`
   height: 50px;
   border-radius: 8px;
-  font-weight:  500;
+  font-weight: 500;
   background: #835afd;
   color: #fff;
-  padding: 0 32px; 
+  padding: 0 32px;
 
   display: flex;
   align-items: center;
@@ -16,7 +18,7 @@
   transition: filter 0.2s;
 
   @media (max-width: 460px) {
-  padding: 0 32px; 
+    padding: 0 32px;
     padding: 0 16px;
   }
 
@@ -38,4 +40,4 @@
     opacity: 0.6;
     cursor: not-allowed;
   }
-}
+`;

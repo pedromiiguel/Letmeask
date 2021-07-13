@@ -20,7 +20,7 @@ import {
   MainContent,
   MainTitle,
   QuestionList
-} from '../Room/style';
+} from '../Room/styles';
 
 
 type RoomParams = {

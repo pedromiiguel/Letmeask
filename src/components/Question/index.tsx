@@ -1,5 +1,10 @@
 import React, { ReactNode } from 'react';
-import './question.scss';
+import {
+  QuestionComponent,
+  QuestionFooter,
+  UserInfo,
+  LikeButton,
+} from './styles';
 import cx from 'classnames';
 
 type QuestionProps = {
@@ -21,7 +26,7 @@ export function Question({
   isHighlighted = false,
 }: QuestionProps) {
   return (
-    <div
+    <QuestionComponent
       className={cx(
         'question',
         { answered: isAnswered },
@@ -29,13 +34,13 @@ export function Question({
       )}
     >
       <p>{content}</p>
-      <footer>
-        <div className="user-info">
+      <QuestionFooter>
+        <UserInfo>
           <img src={author.avatar} alt={author.name} />
           <span>{author.name}</span>
-        </div>
-        <div>{children}</div>
-      </footer>
-    </div>
+        </UserInfo>
+        <LikeButton>{children}</LikeButton>
+      </QuestionFooter>
+    </QuestionComponent>
   );
 }

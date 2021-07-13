@@ -18,7 +18,7 @@ import {
   Form,
   FormFooter,
   QuestionList
-} from './style';
+} from './styles';
 
 type RoomParams = {
   id: string;
