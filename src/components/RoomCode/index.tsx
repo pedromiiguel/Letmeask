@@ -1,7 +1,6 @@
 import React from 'react';
-
 import copyImg from '../../assets/images/copy.svg';
-import './roomCode.scss';
+import { RoomCodeComponent } from './styles';
 
 type RoomCodeProps = {
   code: string;
@@ -13,11 +12,11 @@ export function RoomCode(props: RoomCodeProps) {
   }
 
   return (
-    <button className="room-code" onClick={copyRoomToClipboard}>
+    <RoomCodeComponent className="room-code" onClick={copyRoomToClipboard}>
       <div>
         <img src={copyImg} alt="copy room code" />
       </div>
       <span>Sala #{props.code}</span>
-    </button>
+    </RoomCodeComponent>
   );
 }
