@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import './question.scss';
 import cx from 'classnames';
 
@@ -25,7 +25,7 @@ export function Question({
       className={cx(
         'question',
         { answered: isAnswered },
-        { highlighted: isHighlighted && !isAnswered}
+        { highlighted: isHighlighted && !isAnswered }
       )}
     >
       <p>{content}</p>

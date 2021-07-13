@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 import { useEffect, useState } from 'react';
 import { database } from '../services/firebase';
 import { useAuth } from './useAuth';
@@ -42,7 +43,8 @@ export function useRoom(roomId: string) {
   useEffect(() => {
     const roomRef = database.ref(`rooms/${roomId}`);
 
-    roomRef.on('value', (room) => {
+    // eslint-disable-next-line arrow-parens
+    roomRef.on('value', room => {
       const databaseRoom = room.val();
       const firebaseQuestions: FirebaseQuestions = databaseRoom.questions ?? {};
 
@@ -56,6 +58,7 @@ export function useRoom(roomId: string) {
             isAnswered: value.isAnswered,
             likeCount: Object.values(value.likes ?? {}).length,
             likeId: Object.entries(value.likes ?? {}).find(
+              // eslint-disable-next-line @typescript-eslint/no-unused-vars
               ([key, like]) => like.authorId === user?.id
             )?.[0],
           };

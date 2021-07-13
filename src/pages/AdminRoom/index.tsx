@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { useParams } from 'react-router-dom';
 import { Button } from '../../components/Button';
@@ -67,7 +67,7 @@ export function AdminRoom() {
         </div>
 
         <div className="question-list">
-          {questions.map((question) => (
+          {questions.map(question => (
             <Question
               content={question.content}
               author={question.author}

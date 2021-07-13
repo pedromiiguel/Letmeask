@@ -6,20 +6,23 @@ import { Room } from './pages/Room';
 import { AdminRoom } from './pages/AdminRoom';
 
 import { AuthContextProvider } from './context/AuthContext';
-
-import './styles/global.scss';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from './styles/global';
+import theme from './styles/theme';
 
 function App() {
   return (
     <BrowserRouter>
       <AuthContextProvider>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/rooms/new" component={NewRoom} />
-          <Route path="/rooms/:id" component={Room} />
-          <Route path="/admin/rooms/:id" component={AdminRoom} />
-
-        </Switch>
+        <ThemeProvider theme={theme}>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/rooms/new" component={NewRoom} />
+            <Route path="/rooms/:id" component={Room} />
+            <Route path="/admin/rooms/:id" component={AdminRoom} />
+          </Switch>
+          <GlobalStyle />
+        </ThemeProvider>
       </AuthContextProvider>
     </BrowserRouter>
   );

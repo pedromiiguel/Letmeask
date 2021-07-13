@@ -1,3 +1,4 @@
+import React from 'react';
 import { createContext, ReactNode, useEffect, useState } from 'react';
 import { firebase, auth } from '../services/firebase';
 
@@ -22,7 +23,7 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
   const [user, setUser] = useState<User>();
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
         const { displayName, photoURL, uid } = user;
 

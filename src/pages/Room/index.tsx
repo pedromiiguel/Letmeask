@@ -1,3 +1,4 @@
+import React from 'react';
 import { FormEvent, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Button } from '../../components/Button';
@@ -9,8 +10,15 @@ import { useRoom } from '../../hooks/useRoom';
 
 import logoImg from '../../assets/images/logo.svg';
 
-import './room.scss';
-
+import {
+  PageRoom,
+  Menu,
+  MainContent,
+  MainTitle,
+  Form,
+  FormFooter,
+  QuestionList
+} from './style';
 
 type RoomParams = {
   id: string;
@@ -63,28 +71,28 @@ export function Room() {
     }
   }
   return (
-    <div id="page-room">
-      <header>
+    <PageRoom>
+      <Menu>
         <div className="content">
           <img src={logoImg} alt="Letmeask" />
           <RoomCode code={roomId} />
         </div>
-      </header>
-      <main className="content">
-        <div className="room-title">
+      </Menu>
+      <MainContent>
+        <MainTitle>
           <h1>Sala {title}</h1>
 
           {questions.length > 0 && <span>{questions.length} pergunta(s)</span>}
-        </div>
+        </MainTitle>
 
-        <form onSubmit={handleSendQuestion}>
+        <Form onSubmit={handleSendQuestion}>
           <textarea
             value={newQuestion}
-            onChange={(event) => setNewQuestion(event.target.value)}
+            onChange={event => setNewQuestion(event.target.value)}
             placeholder="O que você quer perguntar"
           />
 
-          <div className="form-footer">
+          <FormFooter>
             {user ? (
               <div className="user-info">
                 <img src={user.avatar} alt={user.name} />
@@ -99,10 +107,10 @@ export function Room() {
             <Button type="submit" disabled={!user}>
               Enviar pergunta
             </Button>
-          </div>
-        </form>
-        <div className="question-list">
-          {questions.map((question) => (
+          </FormFooter>
+        </Form>
+        <QuestionList>
+          {questions.map(question => (
             <Question
               content={question.content}
               author={question.author}
@@ -139,8 +147,8 @@ export function Room() {
               )}
             </Question>
           ))}
-        </div>
-      </main>
-    </div>
+        </QuestionList>
+      </MainContent>
+    </PageRoom>
   );
 }

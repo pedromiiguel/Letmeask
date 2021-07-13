@@ -1,10 +1,10 @@
+import React from 'react';
 import { database } from '../../services/firebase';
 import { useParams } from 'react-router-dom';
 
 import DeleteModalimg from '../../assets/images/delete-modal.svg';
 
 import '../ModalCloseRoom/modal.scss';
-
 
 type ModalType = {
   questionId: string;
@@ -28,7 +28,7 @@ export function ModalDelete({ questionId, setModalDeleteIsOpen }: ModalType) {
       <div className="modal-content">
         <img src={DeleteModalimg} alt="Remover pergunta" />
         <h1>Excluir pergunta</h1>
-        <p>Tem certeza que você deseja excluir esta pergunta?'</p>
+        <p>Tem certeza que você deseja excluir esta pergunta?</p>
         <div className="buttons-container">
           <button onClick={() => setModalDeleteIsOpen(false)}>Cancelar</button>
           <button onClick={() => handleDeleteQuestion(questionId)}>

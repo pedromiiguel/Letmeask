@@ -1,9 +1,9 @@
-import './modal.scss';
+import React from 'react';
+import { useHistory, useParams } from 'react-router-dom';
+import { database } from '../../services/firebase';
 import CloseRoomImg from '../../assets/images/close-room.svg';
 
-import { database } from '../../services/firebase';
-import { useHistory, useParams } from 'react-router-dom';
-
+import './modal.scss';
 
 type ModalType = {
   setIsOpen: (value: boolean) => void;

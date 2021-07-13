@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import { Button } from '../../components/Button';
 import { useHistory } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
@@ -8,7 +8,8 @@ import illustrationImg from '../../assets/images/illustration.svg';
 import logoImg from '../../assets/images/logo.svg';
 import googleIconImg from '../../assets/images/google-icon.svg';
 
-import './auth.scss';
+import { PageAuth, Aside, AuthContainer, Separator, Form, MainContent, CreateRoom} from './styles'
+
 
 export function Home() {
   const history = useHistory();
@@ -49,34 +50,34 @@ export function Home() {
   }
 
   return (
-    <div id="page-auth">
-      <aside>
+    <PageAuth>
+      <Aside>
         <img
           src={illustrationImg}
           alt="Ilustração simbolizando perguntas e respostas"
         />
         <strong>Crie salas de Q&amp; ao-vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo real</p>
-      </aside>
-      <main>
-        <div className="main-content">
+      </Aside>
+      <AuthContainer>
+        <MainContent>
           <img src={logoImg} alt="Letmeask" />
-          <button onClick={handleCreateRoom} className="create-room">
+          <CreateRoom onClick={handleCreateRoom}>
             <img src={googleIconImg} alt="Logo google" />
             Crie sua sala com o google
-          </button>
-          <div className="separator">ou entre em uma sala</div>
-          <form onSubmit={handleJoinRoom}>
+          </CreateRoom>
+          <Separator>ou entre em uma sala</Separator>
+          <Form onSubmit={handleJoinRoom}>
             <input
               type="text"
               placeholder="Digite o código da sala"
-              onChange={(event) => setRoomCode(event.target.value)}
+              onChange={event => setRoomCode(event.target.value)}
               value={roomCode}
             />
             <Button type="submit">Entrar na sala</Button>
-          </form>
-        </div>
-      </main>
-    </div>
+          </Form>
+        </MainContent>
+      </AuthContainer>
+    </PageAuth>
   );
 }
