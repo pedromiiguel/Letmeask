@@ -4,7 +4,8 @@ import { useParams } from 'react-router-dom';
 
 import DeleteModalimg from '../../assets/images/delete-modal.svg';
 
-import '../ModalCloseRoom/modal.scss';
+import { ModalWrapper, ModalContent, ButtonsContainer } from '../ModalCloseRoom/styles';
+
 
 type ModalType = {
   questionId: string;
@@ -24,18 +25,18 @@ export function ModalDelete({ questionId, setModalDeleteIsOpen }: ModalType) {
   }
 
   return (
-    <div className="modal-wrapper">
-      <div className="modal-content">
+    <ModalWrapper>
+      <ModalContent>
         <img src={DeleteModalimg} alt="Remover pergunta" />
         <h1>Excluir pergunta</h1>
         <p>Tem certeza que você deseja excluir esta pergunta?</p>
-        <div className="buttons-container">
+        <ButtonsContainer>
           <button onClick={() => setModalDeleteIsOpen(false)}>Cancelar</button>
           <button onClick={() => handleDeleteQuestion(questionId)}>
             Sim, excluir
           </button>
-        </div>
-      </div>
-    </div>
+        </ButtonsContainer>
+      </ModalContent>
+    </ModalWrapper>
   );
 }

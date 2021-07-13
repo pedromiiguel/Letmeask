@@ -3,7 +3,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import { database } from '../../services/firebase';
 import CloseRoomImg from '../../assets/images/close-room.svg';
 
-import './modal.scss';
+import { ModalWrapper, ModalContent, ButtonsContainer } from './styles';
 
 type ModalType = {
   setIsOpen: (value: boolean) => void;
@@ -24,16 +24,16 @@ export function ModalCloseRoom({ setIsOpen }: ModalType) {
   }
 
   return (
-    <div className="modal-wrapper">
-      <div className="modal-content">
+    <ModalWrapper>
+      <ModalContent>
         <img src={CloseRoomImg} alt="Encerrar sala" />
         <h1>Encerrar sala</h1>
         <p>Tem certeza que você deseja encerrar esta sala?</p>
-        <div className="buttons-container">
+        <ButtonsContainer>
           <button onClick={() => setIsOpen(false)}>Cancelar</button>
           <button onClick={handleEndRoom}>Sim, excluir</button>
-        </div>
-      </div>
-    </div>
+        </ButtonsContainer>
+      </ModalContent>
+    </ModalWrapper>
   );
 }
